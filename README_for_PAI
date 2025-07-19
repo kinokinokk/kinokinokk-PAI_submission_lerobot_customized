@@ -6,11 +6,11 @@ For Physical_AI README Japanese_ver
 
 
 １，はじめに
-本GitHubのリポジトリに入っている多くのディレクトリが、下記のリポジトリをインストールしたものになる。
+本GitHubのリポジトリに入っている一部のディレクトリ（src）は、下記のリポジトリ由来のものである。
 【huggingface/lerobotの公式github】
 https://github.com/huggingface/lerobot
 
-これらを自分のリポジトリにいれる必要があるか、提出するべきか、悩んだ。
+これを自分のリポジトリにいれる必要があるか、提出するべきか、悩んだ。
 ただ、
 ・ポート設定の関係で、部分的に手を加えている点
 ・提出条件が「使用したコード一式」である点
@@ -21,11 +21,27 @@ https://github.com/huggingface/lerobot
 
 
 
-
 ２，ディレクトリ説明
-physical_ai内のファイルはすべて自作である。
+physical_ai内のファイルがメインコードである。（自作）
 
 sensor_robot_output.py：メインスクリプト
 BNO055.py：姿勢データ取得スクリプト
 
 この両方を実行することで、プロジェクトは起動する。
+
+
+なお、BNO055_receiver.inoはArduinoコードである。
+
+
+
+３，仮想環境
+lerobotディレクトリがそれに該当。
+source lerobot/bin/activateによって、環境起動可能。
+
+
+
+４，模倣学習
+original_dataにはso101の模倣学習を行うにあたって収集したデータが含まれる。
+outputsには模倣学習を行った結果が含まれる。
+
+
